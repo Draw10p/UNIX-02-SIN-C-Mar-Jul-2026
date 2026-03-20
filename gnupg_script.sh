@@ -1,0 +1,5 @@
+# uname -a (Conocer que sistema esta instalado)
+# which gpg (Comprobar Instalación)
+# gpg --version(Conocer version de GPG)
+# gpg --full-generate-key ( Generar Par LLaves)
+# gpg --list-keys (llavero digital)
