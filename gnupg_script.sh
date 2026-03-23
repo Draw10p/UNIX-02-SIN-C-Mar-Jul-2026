@@ -8,3 +8,5 @@ gpg --list-secret-keys --keyid-format=long #( This command lists the private key
 # hash copied from the private key A13BBAAB40C5844C
 gpg --armor --export-secret-keys A13BBAAB40C5844C  #(this command exports our private key)
 gpg --importKeyla_llave_Keyla_llave.publica.asc #(This command allows us to import my colleague's public key into our codespace)
+echo "que bueno que somos compañeros" > doc_no_cifrado.txt #(This creates a message that will be sent to the document we name, which in this case is “doc_no_cifrado.txt”")
+cat doc_no_crifrado.txt # (This command helps us verify that the file has been created)
