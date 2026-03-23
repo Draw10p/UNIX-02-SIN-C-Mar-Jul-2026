@@ -11,3 +11,4 @@ gpg --importKeyla_llave_Keyla_llave.publica.asc #(This command allows us to impo
 echo "que bueno que somos compañeros" > doc_no_cifrado.txt #(This creates a message that will be sent to the document we name, which in this case is “doc_no_cifrado.txt”")
 cat doc_no_crifrado.txt # (This command helps us verify that the file has been created)
 gpg --output doc_cifrado.txt --encrypt --recipient 602E18698BE064A4DA50D12408F019E40AC3E0AE doc_no_cifrado.txt #(This command encrypts the file we entered earlier using our partner's hash and sends it to them )
+cat doc_cifrado.txt #(This command helps us check what's inside the file)
