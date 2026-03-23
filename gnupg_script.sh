@@ -7,9 +7,10 @@ gpg --armor --export #(This command exports the public key)
 gpg --list-secret-keys --keyid-format=long #( This command lists the private keys)
 # hash copied from the private key A13BBAAB40C5844C
 gpg --armor --export-secret-keys A13BBAAB40C5844C  #(this command exports our private key)
-gpg --importKeyla_llave_Keyla_llave.publica.asc #(This command allows us to import my friend's public key into our codespace)
+gpg --import keyla_llave.publica.asc #(This command allows us to import my friend's public key into our codespace)
 echo "que bueno que somos compañeros" > doc_no_cifrado.txt #(This creates a message that will be sent to the document we name, which in this case is “doc_no_cifrado.txt”")
 cat doc_no_crifrado.txt # (This command helps us verify that the file has been created)
 gpg --output doc_cifrado.txt --encrypt --recipient 602E18698BE064A4DA50D12408F019E40AC3E0AE doc_no_cifrado.txt #(This command encrypts the file we entered earlier using our partner's hash and sends it to them )
 cat doc_cifrado.txt #(This command helps us check what's inside the file)
 gpg --decrypt keyla_doc_cifrado.txt #(This command helps us decrypt my friend's message)
+gpg --output doc_no_cifrado_firmado.txt
