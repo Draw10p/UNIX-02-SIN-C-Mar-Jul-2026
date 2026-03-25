@@ -16,3 +16,4 @@ gpg --decrypt keyla_doc_cifrado.txt #(This command helps us decrypt my friend's 
 gpg --output doc_no_cifrado_firmado.txt --clearsign doc_no_cifrado.txt #(This command allows us to sign the document we created earlier)
 cat doc_no_cifrado_firmado.txt #(This command helps us check the signed document)
 gpg --verify keyla_doc_no_cifrado_firmado.txt #(This command allows us to verify the signature of the document of friend we signed earlier)
+# The key used to sign my friend's unencrypted file: 602E18698BE064A4DA50D12408F019E40AC3E0AE
