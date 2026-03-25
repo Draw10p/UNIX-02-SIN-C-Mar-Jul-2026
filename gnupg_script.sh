@@ -20,3 +20,4 @@ gpg --verify keyla_doc_no_cifrado_firmado.txt #(This command allows us to verify
 gpg --edit-key 602E18698BE064A4DA50D12408F019E40AC3E0AE #(This command allows us to edit the key of our friend and giving a vote of confidence)
 gpg --sign-key 08F019E40AC3E0AE #(This command allows us to sign the key of our friend)
 gpg --verify keyla_doc_no_cifrado_firmado.txt #(This command allows us to verify the signature of the document of friend we signed earlier)
+gpg --output doc_no_cifrado_firmado_binario.txt --sign doc_no_cifrado.txt #(This command allows us to sign the document we created earlier in binary format)
