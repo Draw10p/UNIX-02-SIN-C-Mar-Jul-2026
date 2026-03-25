@@ -14,3 +14,4 @@ gpg --output doc_cifrado.txt --encrypt --recipient 602E18698BE064A4DA50D12408F01
 cat doc_cifrado.txt #(This command helps us check what's inside the file)
 gpg --decrypt keyla_doc_cifrado.txt #(This command helps us decrypt my friend's message)
 gpg --output doc_no_cifrado_firmado.txt --clearsign doc_no_cifrado.txt #(This command allows us to sign the document we created earlier)
+cat doc_no_cifrado_firmado.txt #(This command helps us check the signed document)
