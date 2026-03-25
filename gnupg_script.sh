@@ -13,4 +13,4 @@ cat doc_no_crifrado.txt # (This command helps us verify that the file has been c
 gpg --output doc_cifrado.txt --encrypt --recipient 602E18698BE064A4DA50D12408F019E40AC3E0AE doc_no_cifrado.txt #(This command encrypts the file we entered earlier using our partner's hash and sends it to them )
 cat doc_cifrado.txt #(This command helps us check what's inside the file)
 gpg --decrypt keyla_doc_cifrado.txt #(This command helps us decrypt my friend's message)
-gpg --output doc_no_cifrado_firmado.txt
+gpg --output doc_no_cifrado_firmado.txt --clearsign doc_no_cifrado.txt #(This command allows us to sign the document we created earlier)
