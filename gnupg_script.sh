@@ -26,3 +26,4 @@ gpg --output firma_separada_doc_no_cifrado.sig --detach-sign doc_no_cifrado.txt 
 gpg --verify keyla_firma_separada_doc_no_cifrado.sig keyla_doc_no_cifrado_firmado.txt #(This command allows us to verify the separate signature of the document of friend we signed earlier)
 gpg --output doc_cifrado_y_firmado.txt --encrypt --sign --recipient 602E18698BE064A4DA50D12408F019E40AC3E0AE doc_no_cifrado.txt #(This command allows us to encrypt and sign the document we created earlier and send it to our friend)
 gpg --output doc_firmado_y_firmado_descifrado_y_validado.txt --decrypt keyla_doc_cifrado_y_firmado.txt #(This command allows us to decrypt the document that our friend sent us and verify the signature at the same time)
+cat doc_firmado_y_firmado_descifrado_y_validado.txt #(This command helps us check the content of the document that our friend sent us)
