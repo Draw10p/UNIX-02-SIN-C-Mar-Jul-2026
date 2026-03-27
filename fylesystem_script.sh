@@ -15,3 +15,8 @@
 #------------------------------------------------------------------------------------------
 # cd/workspaces/UNIX-02-SIN-C-Mar-Jul-2026 ("This command helps us move to the directory where we have our codespace")
 # gcc saludo.c -o saludo ("This command compiles the C file named saludo.c and creates an executable file named saludo")
+#------------------------------------------------------------------------------------------
+# mv ("move or rename files and directories")
+# cp ("copy files and directories")
+# sudo mv saludo_bin /bin ("This command moves the compiled file named saludo to the bin directory, which allows us to run the program from anywhere in the terminal")
+# ls | grep saludo ("This command helps us check if the file named saludo is in the bin directory")
