@@ -22,3 +22,6 @@
 # ls | grep saludo ("This command helps us check if the file named saludo is in the bin directory")
 #------------------------------------------------------------------------------------------
 # pwd ("This command helps us check the current directory we are in")
+#------------------------------------------------------------------------------------------
+# ls -F ("This command helps us list the files and directories in the current directory, and it adds a symbol at the end of each name to indicate the type of file or directory.")
+# ls -i ("This command helps us list the files and directories in the current directory, and it also shows the inode number of each file or directory. The inode number is a unique identifier for each file or directory in the filesystem.")
