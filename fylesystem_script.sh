@@ -1,2 +1,6 @@
 # cd /dev (" Change directory to dev directory")
 # ls (" list archives and directories ")
+# ^C  ("is used to terminate or stop any running process  ")
+# cd /proc (" Change directory to proc directory") 
+# ls ("list procces in proc directory")
+# cat cpuinfo (" show cpu information")
