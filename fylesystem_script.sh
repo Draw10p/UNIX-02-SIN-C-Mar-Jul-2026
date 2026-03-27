@@ -20,3 +20,5 @@
 # cp ("copy files and directories")
 # sudo mv saludo_bin /bin ("This command moves the compiled file named saludo to the bin directory, which allows us to run the program from anywhere in the terminal")
 # ls | grep saludo ("This command helps us check if the file named saludo is in the bin directory")
+#------------------------------------------------------------------------------------------
+# pwd ("This command helps us check the current directory we are in")
