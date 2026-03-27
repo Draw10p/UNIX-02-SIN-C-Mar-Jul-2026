@@ -25,3 +25,7 @@
 #------------------------------------------------------------------------------------------
 # ls -F ("This command helps us list the files and directories in the current directory, and it adds a symbol at the end of each name to indicate the type of file or directory.")
 # ls -i ("This command helps us list the files and directories in the current directory, and it also shows the inode number of each file or directory. The inode number is a unique identifier for each file or directory in the filesystem.")
+#------------------------------------------------------------------------------------------
+# echo "Silencio Keyla" > test.txt ("This command creates a file named test.txt and writes the text "Silencio Keyla" into it")
+# cat test.txt ("This command helps us check the content of the file named test.txt")
+# stat test.txt ("This command provides detailed information about the file named test.txt, including its size, permissions, and timestamps.")
