@@ -3,3 +3,5 @@ sudo apt upgrade #(It downloads and installs the newest available versions of al
 sudo apt install parted #(It downloads and installs the parted software package)
 pip install numpy #(It uses Python's package installer (pip) to download and install the numpy library)
 sudo parted -l && echo -e "\n---\n" && lsblk -f && echo -e "\n---\n" #(It lists all the available storage devices and their partitions, then lists the filesystems and their types, and finally shows the disk space usage in a human-readable format)
+loop #(It creates a loop device, which is a virtual block device that can be used to mount files as if they were physical disks)
+[-d /sys/firmware/efi] && echo "UEFI" || echo "BIOS" #(It checks if the system is booted in UEFI mode by looking for the presence of the /sys/firmware/efi directory. If it exists, it prints "UEFI"; otherwise, it prints "BIOS")
