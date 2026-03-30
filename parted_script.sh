@@ -2,3 +2,4 @@ sudo apt update #(It updates the local list of available software packages and t
 sudo apt upgrade #(It downloads and installs the newest available versions of all software packages currently installed on your system.)
 sudo apt install parted #(It downloads and installs the parted software package)
 pip install numpy #(It uses Python's package installer (pip) to download and install the numpy library)
+sudo parted -l && echo -e "\n---\n" && lsblk -f && echo -e "\n---\n" #(It lists all the available storage devices and their partitions, then lists the filesystems and their types, and finally shows the disk space usage in a human-readable format)
