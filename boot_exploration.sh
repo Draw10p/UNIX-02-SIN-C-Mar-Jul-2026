@@ -67,5 +67,11 @@ man ls # Opens the full system manual page and detailed documentation for the ls
       #--single-branch unless --no-single-branch is given to fetch the histories near the tips of all
       #branches. If you want to clone submodules shallowly, also pass --shallow-submodules.
 #----------------------------------------------------------------------------------------------------
-
+ls -l #lists files and directories in a detailed long format, showing permissions, ownership, size, and timestamps.
+# -rw-rw-rw- 1 codespace root      34523 Apr 17 14:07 LICENSE
+# “-” indicates a regular file. If ‘d’ appears, it is a directory, and if “|” appears, it is a symbolic link
+# “rwx” user permissions
+# “rw-” means it has no execute permissions
+# “r-x” group permissions
+# “r--” permissions for others
 #----------------------------------------------------------------------------------------------------
