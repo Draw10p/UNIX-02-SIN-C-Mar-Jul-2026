@@ -49,6 +49,23 @@ ls -l -ah # It does the same thing as the previous one but is easier to write
 #----------------------------------------------------------------------------------------------------
 ls -lah # It does the same thing as the previous one but is easier to write
 #----------------------------------------------------------------------------------------------------
-mkdir -- -rf #creates a directory literally named (-rf), using (--) to prevent the system from misinterpreting it as an option.
+mkdir -- -rf # Creates a directory literally named (-rf), using (--) to prevent the system from misinterpreting it as an option.
 #----------------------------------------------------------------------------------------------------
-rmdir -- -rf #removes an empty directory literally named (-rf), using (--) to prevent the system from misinterpreting it as a command option.
+rmdir -- -rf # Removes an empty directory literally named (-rf), using (--) to prevent the system from misinterpreting it as a command option.
+#----------------------------------------------------------------------------------------------------
+ls --help # Displays the built-in help manual and a list of all available options for the ls command.
+#----------------------------------------------------------------------------------------------------
+man ls # Opens the full system manual page and detailed documentation for the ls command.
+# “/” searches for a file within this directory
+# “n” moves forward
+# “N” moves backward
+# “Q” exits this directory
+#----------------------------------------------------------------------------------------------------
+ man git-clone # Do the same from the previous one but open the full system manual page and documentation for the git clone command.
+ #--depth <depth>
+      #Create a shallow clone with a history truncated to the specified number of commits. Implies
+      #--single-branch unless --no-single-branch is given to fetch the histories near the tips of all
+      #branches. If you want to clone submodules shallowly, also pass --shallow-submodules.
+#----------------------------------------------------------------------------------------------------
+
+#----------------------------------------------------------------------------------------------------
