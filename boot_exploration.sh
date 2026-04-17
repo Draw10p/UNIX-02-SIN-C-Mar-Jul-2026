@@ -75,3 +75,14 @@ ls -l #lists files and directories in a detailed long format, showing permission
 # “r-x” group permissions
 # “r--” permissions for others
 #----------------------------------------------------------------------------------------------------
+touch script.sh #creates a new empty file named script.sh or updates its timestamp if it already exists.
+chmod +x script.sh #makes the file script.sh executable so it can run as a program.
+#-rwxrwxrwx 1 codespace codespace     0 Apr 17 14:57 script.sh
+#----------------------------------------------------------------------------------------------------
+touch secreto.txt #creates a new empty file named secreto.txt or updates its timestamp if it already exists.
+chmod o-r secreto.txt #removes read permission for "others" from the file secreto.txt.
+#-rw-rw--w- 1 codespace codespace     0 Apr 17 14:59 secreto.txt
+#----------------------------------------------------------------------------------------------------
+touch privado #creates a new empty file named privado or updates its timestamp if it already exists.
+chmod u+rw,go-rwx privado #grants the owner read and write permissions while removing all access for the group and others on the file privado.
+#-rw------- 1 codespace codespace     0 Apr 17 15:01 privado
