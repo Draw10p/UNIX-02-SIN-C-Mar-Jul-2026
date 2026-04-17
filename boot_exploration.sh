@@ -18,3 +18,33 @@ LICENSE              doc_no_cifrado_firmado_binario.txt               keyla_firm
 README.md            firma_separada_doc_no_cifrado.sig                keyla_llave.publica.asc
 boot_exploration.sh  gnupg_script.sh                                  mi_llave_publica.asc
 doc_cifrado.txt      keyla_doc_cifrado.txt
+#----------------------------------------------------------------------------------------------------
+ls -l -a -h #lists all files, including hidden ones, in a detailed view with human-readable sizes.
+total 128K
+drwxrwxrwx+ 3 codespace root      4.0K Apr 17 14:12 .
+drwxr-xrwx+ 5 codespace root      4.0K Apr 17 14:08 ..
+drwxrwxrwx+ 8 codespace root      4.0K Apr 17 14:26 .git
+-rw-rw-rw-  1 codespace root      4.6K Apr 17 14:07 .gitignore
+-rw-rw-rw-  1 codespace root       34K Apr 17 14:07 LICENSE
+-rw-rw-rw-  1 codespace root        53 Apr 17 14:07 README.md
+-rw-rw-rw-  1 codespace codespace 2.0K Apr 17 14:27 boot_exploration.sh
+-rw-rw-rw-  1 codespace root       646 Apr 17 14:07 doc_cifrado.txt
+-rw-rw-rw-  1 codespace root      1.3K Apr 17 14:07 doc_cifrado_y_firmado.txt
+-rw-rw-rw-  1 codespace root        24 Apr 17 14:07 doc_firmado_y_firmado_descifrado_y_validado.txt
+-rw-rw-rw-  1 codespace root        32 Apr 17 14:07 doc_no_cifrado.txt
+-rw-rw-rw-  1 codespace root       914 Apr 17 14:07 doc_no_cifrado_firmado.txt
+-rw-rw-rw-  1 codespace root       646 Apr 17 14:07 doc_no_cifrado_firmado_binario.txt
+-rw-rw-rw-  1 codespace root       566 Apr 17 14:07 firma_separada_doc_no_cifrado.sig
+-rw-rw-rw-  1 codespace root      3.5K Apr 17 14:07 gnupg_script.sh
+-rw-rw-rw-  1 codespace root       640 Apr 17 14:07 keyla_doc_cifrado.txt
+-rw-rw-rw-  1 codespace root      1.2K Apr 17 14:07 keyla_doc_cifrado_y_firmado.txt
+-rw-rw-rw-  1 codespace root        24 Apr 17 14:07 keyla_doc_no_cifrado.txt
+-rw-rw-rw-  1 codespace root       906 Apr 17 14:07 keyla_doc_no_cifrado_firmado.txt
+-rw-rw-rw-  1 codespace root       638 Apr 17 14:07 keyla_doc_no_cifrado_firmado_binario.txt
+-rw-rw-rw-  1 codespace root       566 Apr 17 14:07 keyla_firma_separada_doc_no_cifrado.sig
+-rw-rw-rw-  1 codespace root      3.2K Apr 17 14:07 keyla_llave.publica.asc
+-rw-rw-rw-  1 codespace root      3.2K Apr 17 14:07 mi_llave_publica.asc
+#----------------------------------------------------------------------------------------------------
+ls -l -ah # It does the same thing as the previous one but is easier to write
+#----------------------------------------------------------------------------------------------------
+ls -lah # It does the same thing as the previous one but is easier to write
