@@ -48,3 +48,7 @@ drwxrwxrwx+ 8 codespace root      4.0K Apr 17 14:26 .git
 ls -l -ah # It does the same thing as the previous one but is easier to write
 #----------------------------------------------------------------------------------------------------
 ls -lah # It does the same thing as the previous one but is easier to write
+#----------------------------------------------------------------------------------------------------
+mkdir -- -rf #creates a directory literally named (-rf), using (--) to prevent the system from misinterpreting it as an option.
+#----------------------------------------------------------------------------------------------------
+rmdir -- -rf #removes an empty directory literally named (-rf), using (--) to prevent the system from misinterpreting it as a command option.
