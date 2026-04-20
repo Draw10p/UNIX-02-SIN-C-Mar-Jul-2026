@@ -176,5 +176,22 @@ cron.d                  gitconfig       ld.so.cache  mailcap.order  perl        
 mkdir ~/mi_carpeta # Creates a new folder in your home directory (/home/your_username). Does not need sudo
 # @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ cd ~/mi_carpeta
 # @Draw10p ➜ ~/mi_carpeta $ 
-apt isntall cowsay # Installs the cowsay program on the system. Requires sudo (installing or modifying software packages affects the entire system and requires root privileges).
+# Another way to check if it worked:
+# @Draw10p ➜ ~/mi_carpeta $ ls -ld ~/mi_carpeta
+# drwxr-xr-x 2 codespace codespace 4096 Apr 20 15:25 /home/codespace/mi_carpeta
+apt install cowsay # Installs the cowsay program on the system. Requires sudo (installing or modifying software packages affects the entire system and requires root privileges).
+# Reading package lists... Done
+# Building dependency tree... Done
+# Reading state information... Done
+# E: Unable to locate package cowsay
+#----------------------------------------------------------------------------------------------------
+touch prueba.txt # Creates a new empty file named prueba.txt
+chmod 600 prueba.txt # Grants read and write permissions only to the owner
+ls -l prueba.txt # Displays detailed file information to verify the 600 permissions
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ ls -l prueba.txt
+# -rw------- 1 codespace codespace 0 Apr 20 15:36 prueba.txt
+chmod 755 prueba.txt # Grants read, write, and execute permissions to the owner, and read/execute permissions to everyone else.
+ls -l prueba.txt  # Displays detailed file information again to verify the new 755 permissions
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ ls -l prueba.txt
+# -rwxr-xr-x 1 codespace codespace 0 Apr 20 15:36 prueba.txt
 #----------------------------------------------------------------------------------------------------
