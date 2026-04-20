@@ -106,5 +106,6 @@ sudo -i # Opens an interactive login shell as the root user, fully loading root'
 #----------------------------------------------------------------------------------------------------
 sudo su # Switches you to the root user account and opens a root shell, but typically retains your current environment variables instead of fully loading the root profile.
 #----------------------------------------------------------------------------------------------------
-
+echo "$HOME" # Command prints the actual path of your home directory because the double quotes allow the shell to evaluate and expand the variable.
+echo '$HOME' # This prints the literal text "$HOME" to the screen because the single quotes prevent the shell from evaluating it as a variable.
 #----------------------------------------------------------------------------------------------------
