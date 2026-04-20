@@ -102,3 +102,9 @@ sudo sh -c 'echo "chao" >> /etc/archivo_protegido' # Uses a root-privileged shel
 # hola
 # chao
 #----------------------------------------------------------------------------------------------------
+sudo -i # Opens an interactive login shell as the root user, fully loading root's environment variables and placing you in the root home directory.
+#----------------------------------------------------------------------------------------------------
+sudo su # Switches you to the root user account and opens a root shell, but typically retains your current environment variables instead of fully loading the root profile.
+#----------------------------------------------------------------------------------------------------
+
+#----------------------------------------------------------------------------------------------------
