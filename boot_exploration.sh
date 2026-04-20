@@ -86,3 +86,14 @@ chmod o-r secreto.txt #removes read permission for "others" from the file secret
 touch privado #creates a new empty file named privado or updates its timestamp if it already exists.
 chmod u+rw,go-rwx privado #grants the owner read and write permissions while removing all access for the group and others on the file privado.
 #-rw------- 1 codespace codespace     0 Apr 17 15:01 privado
+#----------------------------------------------------------------------------------------------------
+#RUNNING COMMAND AS SUPER USER DO (SUDO)
+#----------------------------------------------------------------------------------------------------
+sudo echo "hola" > /etc/archivo_protegido
+bash: /etc/archivo_protegido: Permission denied
+#The command fails because sudo only elevates the echo command, while the file redirection (>) is executed by your regular user, who lacks permission to write to the protected /etc/ directory.
+#----------------------------------------------------------------------------------------------------
+
+#----------------------------------------------------------------------------------------------------
+
+#----------------------------------------------------------------------------------------------------
