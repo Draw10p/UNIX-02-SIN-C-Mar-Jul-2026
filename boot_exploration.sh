@@ -107,5 +107,24 @@ sudo -i # Opens an interactive login shell as the root user, fully loading root'
 sudo su # Switches you to the root user account and opens a root shell, but typically retains your current environment variables instead of fully loading the root profile.
 #----------------------------------------------------------------------------------------------------
 echo "$HOME" # Command prints the actual path of your home directory because the double quotes allow the shell to evaluate and expand the variable.
+# /home/codespace
 echo '$HOME' # This prints the literal text "$HOME" to the screen because the single quotes prevent the shell from evaluating it as a variable.
+# $HOME
 #----------------------------------------------------------------------------------------------------
+echo '#!/bin/sh' > hola.sh # Creates or overwrites the file hola.sh and writes the shebang line #!/bin/sh into it, setting it up as a standard shell script.
+echo 'echo " Keyla no pone atención"' >> hola.sh # Appends the literal command echo " Keyla no pone atención" to the end of the file hola.sh without overwriting its existing content.
+cat hola.sh # Reads and displays the entire content of the file
+./hola.sh # it executes the hola.sh script located in your current working directory as a new child process but create a error.
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ ./hola.sh
+# bash: ./hola.sh: Permission denied
+#----------------------------------------------------------------------------------------------------
+ls -l hola.sh # Checks the initial detailed properties of the file, showing that it likely only has read and write permissions
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ ls -l hola.sh
+# -rw-rw-rw- 1 codespace codespace 42 Apr 20 15:05 hola.sh
+chmod +x hola.sh # Modifies the file's permissions, adding the execute (x) flag so the system recognizes it as a runnable program.
+ls -l hola.sh # This verifies the change, confirming that the execute permissions have been successfully applied (looking something like
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ ls -l hola.sh
+# -rwxrwxrwx 1 codespace codespace 42 Apr 20 15:05 hola.sh
+./hola.sh # Executes the script located in your current directory. Based on the contents you added previously
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ ./hola.sh
+# Keyla no pone atención
