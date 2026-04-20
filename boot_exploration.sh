@@ -93,6 +93,12 @@ sudo echo "hola" > /etc/archivo_protegido #The command fails because sudo only e
 # bash: /etc/archivo_protegido: Permission denied
 #----------------------------------------------------------------------------------------------------
 echo "hola" | sudo tee /etc/archivo_protegido > /dev/null # This is safely writes "hola" to a protected file using root privileges, while discarding the screen output to keep the terminal clean.
+echo "hola" | sudo tee /etc/archivo_protegido # This uses root privileges to safely write "hola" into a protected file while simultaneously displaying the text on your screen.
+# cat /etc/archivo_protegido
+# hola
 #----------------------------------------------------------------------------------------------------
-
+sudo sh -c 'echo "chao" >> /etc/archivo_protegido' # Uses a root-privileged shell to append "chao" to a protected file, successfully bypassing standard redirection permission errors. 
+# cat /etc/archivo_protegido
+# hola
+# chao
 #----------------------------------------------------------------------------------------------------
