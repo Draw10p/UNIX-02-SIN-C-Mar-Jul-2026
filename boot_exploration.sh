@@ -128,3 +128,53 @@ ls -l hola.sh # This verifies the change, confirming that the execute permission
 ./hola.sh # Executes the script located in your current directory. Based on the contents you added previously
 # @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ ./hola.sh
 # Keyla no pone atención
+#----------------------------------------------------------------------------------------------------
+ls /etc # Lists the contents of the /etc configuration directory. Does not need sudo
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ ls /etc
+ODBCDataSources         cron.d          gdb          issue.net      magic           pam.conf    resolv.conf  sudo_logsrvd.conf
+PackageKit              cron.daily      gitconfig    kernel         magic.mime      pam.d       rmt          sudoers
+X11                     cron.weekly     gnutls       ld.so.cache    mailcap         passwd      rpc          sudoers.d
+adduser.conf            csh.login       gprofng.rc   ld.so.conf     mailcap.order   passwd-     rvmrc        sysctl.conf
+alternatives            dbus-1          groff        ld.so.conf.d   manpath.config  perl        security     sysctl.d
+apache2                 debconf.conf    group        legal          mime.types      polkit-1    selinux      systemd
+apparmor.d              debian_version  group-       libaudit.conf  mke2fs.conf     profile     services     terminfo
+apt                     debuginfod      gshadow      libnl-3        modules-load.d  profile.d   sgml         timezone
+archivo_protegido       default         gshadow-     lighttpd       mtab            protocols   shadow       tmpfiles.d
+bash.bashrc             deluser.conf    gss          locale.alias   mysql           python3     shadow-      ucf.conf
+bash_completion         dpkg            host.conf    locale.conf    nanorc          python3.12  shells       ufw
+bash_completion.d       e2scrub.conf    hostname     locale.gen     netconfig       rc0.d       skel         update-motd.d
+bindresvport.blacklist  emacs           hosts        localtime      networks        rc1.d       ssh          vconsole.conf
+binfmt.d                environment     hosts.allow  logcheck       nftables.conf   rc2.d       ssl          vim
+ca-certificates         ethertypes      hosts.deny   login.defs     nsswitch.conf   rc3.d       subgid       wgetrc
+ca-certificates.conf    fish            init.d       logrotate.d    odbc.ini        rc4.d       subgid-      xattr.conf
+cloud                   fonts           inputrc      lsb-release    odbcinst.ini    rc5.d       subuid       xdg
+credstore               fstab           iproute2     lynx           opt             rc6.d       subuid-      xml
+credstore.encrypted     gai.conf        issue        machine-id     os-release      rcS.d       sudo.conf    zsh
+touch /etc/prueba.txt # Attempts to create an empty file in the /etc directory. Requires sudo (regular users do not have write permissions there).
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ cd /etc
+# @Draw10p ➜ /etc $ ls
+ODBCDataSources         cron.daily      gnutls       ld.so.conf     manpath.config  polkit-1     selinux            terminfo
+PackageKit              cron.weekly     gprofng.rc   ld.so.conf.d   mime.types      profile      services           timezone
+X11                     csh.login       groff        legal          mke2fs.conf     profile.d    sgml               tmpfiles.d
+adduser.conf            dbus-1          group        libaudit.conf  modules-load.d  protocols    shadow             ucf.conf
+alternatives            debconf.conf    group-       libnl-3        mtab            (#prueba.txt)  shadow-            ufw
+apache2                 debian_version  gshadow      lighttpd       mysql           python3      shells             update-motd.d
+apparmor.d              debuginfod      gshadow-     locale.alias   nanorc          python3.12   skel               vconsole.conf
+apt                     default         gss          locale.conf    netconfig       rc0.d        ssh                vim
+archivo_protegido       deluser.conf    host.conf    locale.gen     networks        rc1.d        ssl                wgetrc
+bash.bashrc             dpkg            hostname     localtime      nftables.conf   rc2.d        subgid             xattr.conf
+bash_completion         e2scrub.conf    hosts        logcheck       nsswitch.conf   rc3.d        subgid-            xdg
+bash_completion.d       emacs           hosts.allow  login.defs     odbc.ini        rc4.d        subuid             xml
+bindresvport.blacklist  environment     hosts.deny   logrotate.d    odbcinst.ini    rc5.d        subuid-            zsh
+binfmt.d                ethertypes      init.d       lsb-release    opt             rc6.d        sudo.conf
+ca-certificates         fish            inputrc      lynx           os-release      rcS.d        sudo_logsrvd.conf
+ca-certificates.conf    fonts           iproute2     machine-id     pam.conf        resolv.conf  sudoers
+cloud                   fstab           issue        magic          pam.d           rmt          sudoers.d
+credstore               gai.conf        issue.net    magic.mime     passwd          rpc          sysctl.conf
+credstore.encrypted     gdb             kernel       mailcap        passwd-         rvmrc        sysctl.d
+cron.d                  gitconfig       ld.so.cache  mailcap.order  perl            security     systemd
+mkdir ~/mi_carpeta # Creates a new folder in your home directory (/home/your_username). Does not need sudo
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ cd ~/mi_carpeta
+# @Draw10p ➜ ~/mi_carpeta $ 
+apt isntall cowsay # Installs the cowsay program on the system. Requires sudo (installing or modifying software packages affects the entire system and requires root privileges).
+#----------------------------------------------------------------------------------------------------
