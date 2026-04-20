@@ -89,11 +89,10 @@ chmod u+rw,go-rwx privado #grants the owner read and write permissions while rem
 #----------------------------------------------------------------------------------------------------
 #RUNNING COMMAND AS SUPER USER DO (SUDO)
 #----------------------------------------------------------------------------------------------------
-sudo echo "hola" > /etc/archivo_protegido
-bash: /etc/archivo_protegido: Permission denied
-#The command fails because sudo only elevates the echo command, while the file redirection (>) is executed by your regular user, who lacks permission to write to the protected /etc/ directory.
+sudo echo "hola" > /etc/archivo_protegido #The command fails because sudo only elevates the echo command, while the file redirection (>) is executed by your regular user, who lacks permission to write to the protected /etc/ directory.
+# bash: /etc/archivo_protegido: Permission denied
 #----------------------------------------------------------------------------------------------------
-
+echo "hola" | sudo tee /etc/archivo_protegido > /dev/null # This is safely writes "hola" to a protected file using root privileges, while discarding the screen output to keep the terminal clean.
 #----------------------------------------------------------------------------------------------------
 
 #----------------------------------------------------------------------------------------------------
