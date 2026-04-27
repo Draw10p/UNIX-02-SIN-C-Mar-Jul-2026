@@ -236,7 +236,20 @@ drwx------ 2 codespace codespace  4096 Apr 27 15:27 privado
 # -rwxrwxrwx 1 codespace root          0 Apr 27 14:10 script.sh
 -rw------- 1 codespace codespace     0 Apr 27 15:26 secreto.txt
 #----------------------------------------------------------------------------------------------------
-
+whoami # The command outputs the effective username of the currently logged-in user directly to the terminal.
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ whoami
+# codespace
+#@Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ echo "Hola" > mi_archivo
+#@Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ ls -l mi_archivo
+#-rw-r--r-- 1 codespace codespace 5 Apr 27 15:38 mi_archivo
+sudo useradd -m -s /usr/bin/zsh luna #command uses root privileges to create a new user account named luna, automatically generating their home directory and setting Zsh as their default login shell.
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ sudo useradd -m -s /usr/bin/zsh luna
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ ls /home
+codespace  luna  vscode
+sudo chown luna mi_archivo # command uses root privileges to change the ownership of the file named mi_archivo so that the user luna becomes its new owner.
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ sudo chown luna mi_archivo
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ ls -l mi_archivo
+-rw-r--r-- 1 luna codespace 5 Apr 27 15:38 mi_archivo
 #----------------------------------------------------------------------------------------------------
 
 #----------------------------------------------------------------------------------------------------
