@@ -195,3 +195,28 @@ ls -l prueba.txt  # Displays detailed file information again to verify the new 7
 # @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ ls -l prueba.txt
 # -rwxr-xr-x 1 codespace codespace 0 Apr 20 15:36 prueba.txt
 #----------------------------------------------------------------------------------------------------
+umask #This command sets or displays the default permission mask, determining which read, write, and execute permissions are automatically denied when new files or directories are created.
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ umask 
+# 0022 
+sudo apt install acl # This command uses root privileges to download and install the Access Control List (ACL) utility via the apt package manager on Debian-based Linux systems.
+sudo chown -R $(whoami) . # Command uses root privileges to recursively change the ownership of the current directory and all of its contents to your currently logged-in user.
+sudo setfacl -bnR . # This command uses root privileges to recursively remove all extended ACL entries from the current directory and its contents without recalculating the effective rights mask.
+
+# We don't use AI in this case because it might confuse you and lead to an infinite loop where you don't find any results. Therefore, it's best to use forums or start your research from scratch, 
+#since you can always find answers more broadly—after all, this problem probably hasn't just happened to you here. 
+
+# GitHub Issues are a built-in tracking system used to report bugs, request features, and manage project tasks. They help programmers by centralizing discussions, assigning work, tracking progress, 
+#and streamlining collaboration within a repository to keep software development highly organized and efficient.
+#----------------------------------------------------------------------------------------------------
+
+#----------------------------------------------------------------------------------------------------
+
+#----------------------------------------------------------------------------------------------------
+
+#----------------------------------------------------------------------------------------------------
+
+#----------------------------------------------------------------------------------------------------
+
+#----------------------------------------------------------------------------------------------------
+
+#----------------------------------------------------------------------------------------------------
