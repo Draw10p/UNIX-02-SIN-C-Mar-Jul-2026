@@ -209,11 +209,12 @@ sudo setfacl -bnR . # This command uses root privileges to recursively remove al
 #and streamlining collaboration within a repository to keep software development highly organized and efficient.
 #----------------------------------------------------------------------------------------------------
 umask 027 #Execute umask 027 to set the default permission mask so that newly created files automatically default to -rw-r----- and directories to drwxr-x---, denying group write access and all access for others.
-#@Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ umask 027
-#@Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ touch archivo2
-#@Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ mkdir directorio2
-#@Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ ls -l
-#total 136
+# That subtracts the mask values from the system's default base permissions of 666 for files and 777 for directories, mathematically resulting in 640 (-rw-r-----) for archivo2 and 750 (drwxr-x---) for directorio2.
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ umask 027
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ touch archivo2
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ mkdir directorio2
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ ls -l
+# total 136
 #-rw-rw-rw- 1 codespace root      34523 Apr 27 14:10 LICENSE
 #-rw-rw-rw- 1 codespace root         53 Apr 27 14:10 README.md
 #-rw-rw-rw- 1 codespace codespace     0 Apr 27 14:51 archivo1
@@ -222,7 +223,18 @@ umask 027 #Execute umask 027 to set the default permission mask so that newly cr
 # drwxrwxrwx 2 codespace codespace  4096 Apr 27 14:51 directorio1
 drwxr-x--- 2 codespace codespace  4096 Apr 27 15:19 directorio2
 #----------------------------------------------------------------------------------------------------
-
+umask 077 # to set the default permission mask so that newly created files automatically default to -rw------- and directories to drwx------, denying all access to groups and others.
+# The subtracts the mask values from the system's default base permissions of 666 for files and 777 for directories, mathematically resulting in 600 (-rw-------) for secreto.txt and 700 (drwx------) for the privado directory.
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ umask 077
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ touch secreto.txt
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ mkdir privado
+# @Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ ls -l
+# total 144
+# -rw-rw-rw- 1 codespace root       3187 Apr 27 14:10 mi_llave_publica.asc
+drwx------ 2 codespace codespace  4096 Apr 27 15:27 privado
+# -rwxrwxrwx 1 codespace root          0 Apr 27 14:10 prueba.txt
+# -rwxrwxrwx 1 codespace root          0 Apr 27 14:10 script.sh
+-rw------- 1 codespace codespace     0 Apr 27 15:26 secreto.txt
 #----------------------------------------------------------------------------------------------------
 
 #----------------------------------------------------------------------------------------------------
