@@ -208,7 +208,19 @@ sudo setfacl -bnR . # This command uses root privileges to recursively remove al
 # GitHub Issues are a built-in tracking system used to report bugs, request features, and manage project tasks. They help programmers by centralizing discussions, assigning work, tracking progress, 
 #and streamlining collaboration within a repository to keep software development highly organized and efficient.
 #----------------------------------------------------------------------------------------------------
-
+umask 027 #Execute umask 027 to set the default permission mask so that newly created files automatically default to -rw-r----- and directories to drwxr-x---, denying group write access and all access for others.
+#@Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ umask 027
+#@Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ touch archivo2
+#@Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ mkdir directorio2
+#@Draw10p ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_exploration) $ ls -l
+#total 136
+#-rw-rw-rw- 1 codespace root      34523 Apr 27 14:10 LICENSE
+#-rw-rw-rw- 1 codespace root         53 Apr 27 14:10 README.md
+#-rw-rw-rw- 1 codespace codespace     0 Apr 27 14:51 archivo1
+-rw-r----- 1 codespace codespace     0 Apr 27 15:19 archivo2
+#-rw-rw-rw- 1 codespace root      20437 Apr 27 15:12 boot_exploration.sh
+# drwxrwxrwx 2 codespace codespace  4096 Apr 27 14:51 directorio1
+drwxr-x--- 2 codespace codespace  4096 Apr 27 15:19 directorio2
 #----------------------------------------------------------------------------------------------------
 
 #----------------------------------------------------------------------------------------------------
