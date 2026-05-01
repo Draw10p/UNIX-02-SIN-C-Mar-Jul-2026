@@ -6,3 +6,8 @@
 5. aptitude -v  moo # This command uses the -v option to demonstrate how the command's behavior can be modified using its various functions, resulting in different outputs each time it is run.
 -> aptitude -v -v moo / aptitude -vv moo # Different ways to use this command
 6. pwd # This command displays the working directory, including its current location within the file system
+7. cd # This command is used to change directories and navigate the file system. 
+-> cd / # This command takes you directly to the root directory
+-> cd .. # This command refers to the directory above the current directory, sometimes called the parent directory. 
+-> cd . # This command helps us determine the current directory where the user is located
+-> cd ~ # This command helps us return to our home directory at any time
