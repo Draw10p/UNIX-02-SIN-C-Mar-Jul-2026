@@ -38,7 +38,15 @@ su --login
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 14 ./ #This indicates that the “command” must be run from the current directory.
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-15 chown # This command is used to change the owner of files and directories, which requires administrative access
+15. chown # This command is used to change the owner of files and directories, which requires administrative access
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+16. cat # This command is used to quickly view the contents of small files.
+-> head y tail # This is an option used to view a specific number of lines from the beginning or end of a file; use these commands.
+-> -n # This option uses "head" and "tail" to specify the number of lines from the file you want to display, and uses the filename as an argument.
+-> more # It's the most basic version that shows you the text and only lets you move forward
+-> less # This is the advanced version, which does the same thing but lets you move freely up and down using the arrow keys.
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Anotes Adicionales 
 
