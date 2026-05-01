@@ -5,3 +5,4 @@
 -> ls -l -r / ls -rl / ls -lr # Different ways to use this command, including the -l
 5. aptitude -v  moo # This command uses the -v option to demonstrate how the command's behavior can be modified using its various functions, resulting in different outputs each time it is run.
 -> aptitude -v -v moo / aptitude -vv moo # Different ways to use this command
+6. pwd # This command displays the working directory, including its current location within the file system
