@@ -34,9 +34,9 @@ su --login
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 12. sl #This command is configured as a steam locomotive, so it requires administrative access to prevent the execution of sensitive or privileged commands.
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- 
+13. chmod # This command is used to change the permissions of a file or directory; only the root user or the file's owner can perform this action.
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+14 ./ #This indicates that the “command” must be run from the current directory.
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -54,7 +54,20 @@ Anotes Adicionales
 
 # Tabla de Tipos de permisos
 #Permiso	                Efectos sobre los Archivos	                                Efectos sobre los Directorios
-#leer (read) (r)       	Permite que el contenido del archivo sea leído o copiado.	Sin el permiso para ejecutar, permite obtener un listado poco detallado de los archivos que contiene el directorio. Con el permiso para ejecutar, ls -l proporciona un listado detallado de archivos.
-#escribir (write) (w)	Permite modificar o reescribir el contenido del archivo.    Permite añadir o eliminar archivos en un directorio.	Para que este permiso funcione, el directorio debe tener permiso para ejecutar.
-#ejecutar (execute) (x)	Permite que un archivo funcione como un proceso, aunque     Permite que el usuario se traslade del directorio si en el directorio padre también posee permiso escribir (write).
-#                       archivos script también requerirán el permiso leer (read).	
+#leer (read) (r)       	    Permite que el contenido del archivo sea leído o copiado.	Sin el permiso para ejecutar, permite obtener un listado poco detallado de los archivos que contiene el directorio. Con el permiso para ejecutar, ls -l proporciona un listado detallado de archivos.
+#escribir (write) (w)	    Permite modificar o reescribir el contenido del archivo.    Permite añadir o eliminar archivos en un directorio.	Para que este permiso funcione, el directorio debe tener permiso para ejecutar.
+#ejecutar (execute) (x)	    Permite que un archivo funcione como un proceso, aunque     Permite que el usuario se traslade del directorio si en el directorio padre también posee permiso escribir (write).
+#                           archivos script también requerirán el permiso leer (read).	
+
+# Tabla de los Conjuntos de Permisos
+# Símbolo	    Significado
+# u	Usuario:    El usuario propietario del archivo.
+# g	Grupo:      El grupo propietario del archivo.
+# o	Otros:      Cualquier otro que no sea el usuario propietario o un miembro del grupo propietario.
+# a	Todos:      Se refiere al usuario, grupo, y todos los demás.
+
+# Tabla sobre el tipo de Acción 
+# Símbolo	Significado
+# +	        Añadir permiso, si es necesario
+# =	        Especificar el permiso exacto
+# -	        Eliminar el permiso, si es necesario
