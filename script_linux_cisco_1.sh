@@ -3,3 +3,5 @@
 3. ls -l # This lists the contents of a directory in long format and provides detailed information about each file
 4. ls -r # This lists the contents of a directory but displays the results in reverse alphabetical order.
 -> ls -l -r / ls -rl / ls -lr # Different ways to use this command, including the -l
+5. aptitude -v  moo # This command uses the -v option to demonstrate how the command's behavior can be modified using its various functions, resulting in different outputs each time it is run.
+-> aptitude -v -v moo / aptitude -vv moo # Different ways to use this command
