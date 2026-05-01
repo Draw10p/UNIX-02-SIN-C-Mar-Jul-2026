@@ -24,8 +24,25 @@
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 10. -r # This command will reverse the sort order of the files, regardless of the sort type.
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Anotes Adicionales 
-# Tabla de lso Tipos de Archivos
+11. su #This command allows us to temporarily act as a different user, which will open a new shell as the root user
+# Alternatives for using the "su" command 
+su -
+su -l
+su --login
+-> sudo # This command can also be used to run a command with administrative privileges, such as the one used by the su 
+-> -u # This command is used to specify a different user account
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+12. sl #This command is configured as a steam locomotive, so it requires administrative access to prevent the execution of sensitive or privileged commands.
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Anotes Adicionales 
+
+# Tabla de los Tipos de Archivos
 # Símbolo	Tipo de archivo	    Descripción
 #  d	    directorio	        Un archivo usado para contener otros archivos.
 #  -	    archivo ordinario	Incluye archivos leíbles, imágenes, archivos binarios, y archivos comprimidos.
@@ -34,3 +51,10 @@
 #  p	    tubería (pipe)	    Permite la comunicación entre procesos.
 #  b	    archivo bloque	    Usado para comunicaciones con el equipo (hardware).
 #  c	    archivo carácter	Usado para comunicaciones con el equipo (hardware).
+
+# Tabla de Tipos de permisos
+#Permiso	                Efectos sobre los Archivos	                                Efectos sobre los Directorios
+#leer (read) (r)       	Permite que el contenido del archivo sea leído o copiado.	Sin el permiso para ejecutar, permite obtener un listado poco detallado de los archivos que contiene el directorio. Con el permiso para ejecutar, ls -l proporciona un listado detallado de archivos.
+#escribir (write) (w)	Permite modificar o reescribir el contenido del archivo.    Permite añadir o eliminar archivos en un directorio.	Para que este permiso funcione, el directorio debe tener permiso para ejecutar.
+#ejecutar (execute) (x)	Permite que un archivo funcione como un proceso, aunque     Permite que el usuario se traslade del directorio si en el directorio padre también posee permiso escribir (write).
+#                       archivos script también requerirán el permiso leer (read).	
