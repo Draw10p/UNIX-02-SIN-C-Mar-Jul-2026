@@ -1,3 +1,5 @@
 1. ls # This returns a list of the files in the current directory.
 2. aptitude moo # This command is a package management feature available in some versions of Linux, which accepts “moo” as an argument
 3. ls -l # This lists the contents of a directory in long format and provides detailed information about each file
+4. ls -r # This lists the contents of a directory but displays the results in reverse alphabetical order.
+-> ls -l -r / ls -rl / ls -lr # Different ways to use this command, including the -l
