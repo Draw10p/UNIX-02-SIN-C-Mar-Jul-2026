@@ -1,2 +1,2 @@
 1. ls # This returns a list of the files in the current directory.
-
+2. aptitude moo # This command is a package management feature available in some versions of Linux, which accepts “moo” as an argument
