@@ -52,43 +52,44 @@ su --login
 # But it also has other features, such as cloning or deleting entire disks or partitions, another for copying raw data to removable devices such as USB drives or CD-ROMs, 
 # as well as for creating a backup and restoring the MBR (Master Boot Record), and also for creating a file of a specific size filled with binary zeros, which can be used as a swap file (virtual memory).
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Anotes Adicionales 
-
-Tabla de los Tipos de Archivos
-# Símbolo	Tipo de archivo	    Descripción
-#  d	    directorio	        Un archivo usado para contener otros archivos.
-#  -	    archivo ordinario	Incluye archivos leíbles, imágenes, archivos binarios, y archivos comprimidos.
-#  l	    enlaces simbólicos	Apunta a otro archivo.
-#  s	    socket	            Permite la comunicación entre procesos.
-#  p	    tubería (pipe)	    Permite la comunicación entre procesos.
-#  b	    archivo bloque	    Usado para comunicaciones con el equipo (hardware).
-#  c	    archivo carácter	Usado para comunicaciones con el equipo (hardware).
+19. mv # This command is used to move a file from one location in the file system to another.
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Tabla de Tipos de permisos
-#Permiso	                Efectos sobre los Archivos	                                Efectos sobre los Directorios
-#leer (read) (r)       	    Permite que el contenido del archivo sea leído o copiado.	Sin el permiso para ejecutar, permite obtener un listado poco detallado de los archivos que contiene el directorio. Con el permiso para ejecutar, ls -l proporciona un listado detallado de archivos.
-#escribir (write) (w)	    Permite modificar o reescribir el contenido del archivo.    Permite añadir o eliminar archivos en un directorio.	Para que este permiso funcione, el directorio debe tener permiso para ejecutar.
-#ejecutar (execute) (x)	    Permite que un archivo funcione como un proceso, aunque     Permite que el usuario se traslade del directorio si en el directorio padre también posee permiso escribir (write).
-#                           archivos script también requerirán el permiso leer (read).	
+Additional Notes
+File Types Table
+# Symbol    File type         Description
+#  d        directory         A file used to contain other files.
+#  -        regular file      Includes readable files, images, binary files, and compressed files.
+#  l        symbolic link     Points to another file.
+#  s        socket            Enables communication between processes.
+#  p        pipe              Enables communication between processes.
+#  b        block file        Used for communication with hardware.
+#  c        character file    Used for communication with hardware.
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Tabla de los Conjuntos de Permisos
-# Símbolo	    Significado
-# u	Usuario:    El usuario propietario del archivo.
-# g	Grupo:      El grupo propietario del archivo.
-# o	Otros:      Cualquier otro que no sea el usuario propietario o un miembro del grupo propietario.
-# a	Todos:      Se refiere al usuario, grupo, y todos los demás.
+Table of Permit Types
+#Permission       Effects on Files                                          Effects on Directories
+#read (r)         Allows the file's contents to be read or copied.          Without execute permission, it provides a brief listing of the files in the directory. With execute permission, `ls -l` provides a detailed listing of files.
+#write (w)        Allows the file’s contents to be modified or rewritten.   Allows files to be added to or removed from a directory.    For this permission to work, the directory must have execute permission.
+#execute (x)      Allows a file to run as a process, although               Allows the user to move out of the directory if the parent directory also has write permission.
+#                 Script files will also require read permission.	
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Tabla sobre el tipo de Acción 
-# Símbolo	Significado
-# +	        Añadir permiso, si es necesario
-# =	        Especificar el permiso exacto
-# -	        Eliminar el permiso, si es necesario
+Permission Sets Table
+# Symbol        Meaning
+# u    User:    The user who owns the file.
+# g    Group:   The group that owns the file.
+# o    Others:  Anyone other than the owner or a member of the owning group.
+# a    All:     Refers to the user, group, and everyone else.
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Table of Stock Types 
+# Symbol    Meaning
+# +         Add permission, if necessary
+# =         Specify the exact permission
+# -         Remove permission, if necessary
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # There are two locations where we should always have write and execute permissions: the home directory and the /tmp directory.
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Tabla de Argumentos Especiales del comando "dd"
-# Argumento	    Descripción
-# if	        Archivo de entrada (Input File): El archivo de entrada que se va a leer.
-# of	        Archivo de salida (Output File): El archivo de salida que se va a escribir.
-# bs	        Tamaño de bloque (Block Size): El tamaño de bloque que se va a utilizar. De forma predeterminada, el valor se presenta en bytes. Utilice los sufijos siguientes para especificar otras unidades: K, M, G y T para kilobytes, megabytes, gigabytes y terabytes respectivamente.
-# count	        Recuento: El número de bloques que se van a leer desde el archivo de entrada.
+List of Special Arguments for the “dd” Command
+# Argument      Description
+# if            Input File: The input file to be read.
+# of            Output File: The output file to be written to.
+# bs            Block Size: The block size to be used. By default, the value is given in bytes. Use the following suffixes to specify other units: K, M, G, and T for kilobytes, megabytes, gigabytes, and terabytes, respectively.
+# count         Count: The number of blocks to be read from the input file.
