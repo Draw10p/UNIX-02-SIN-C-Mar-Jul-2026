@@ -229,7 +229,7 @@ __set_prompt() {
     else
         mark="\[\e[31m\]✗ $ec\[\e[0m\]"
     fi
-    PS1="\[\e[36m\][Darwin-Unix✞]\[\e[0m\] \[\e[33m\]\W\[\e[0m\] $mark \$ "
+    PS1="\[\e[36m\][Darwin-Román✞]\[\e[0m\] \[\e[33m\]\W\[\e[0m\] $mark \$ "
 }
 PROMPT_COMMAND=__set_prompt
 EOF
