@@ -84,5 +84,8 @@ Creation of new groups
 # marketing:x:2100:
 # cache_web:x:102:
 #-----------------------------------------------------------------------------------------------------------------------------
-
+usermod -aG desarrolladores root #The command adds the root user to the existing group named desarrolladores without removing it from its current groups.
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # usermod -aG desarrolladores root 
+usermod -aG diseno root  # The command adds the root user to the existing group named diseno without removing it from its current groups.   
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # usermod -aG diseno root       
 #-----------------------------------------------------------------------------------------------------------------------------
