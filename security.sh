@@ -53,7 +53,22 @@
 # [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # id -G
 # 0
 #-----------------------------------------------------------------------------------------------------------------------------
-
+Creacion de nuevo directorio con el nombre de proyecto unix
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # mkdir ~/proyecto_unix/                                                                                                                      
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # ls -la  ~/proyecto_unix/
+# total 8
+# drwxr-xr-x 2 root root 4096 may  8 15:06 .
+# drwx------ 1 root root 4096 may  8 15:06 ..
 #-----------------------------------------------------------------------------------------------------------------------------
+10. groupadd # command creates a new user group on a Linux operating system.
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # groupadd desarrolladores
+11. groupadd -g 2000 # It creates a new user group and explicitly sets its Group ID to 2000.
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # groupadd -g 2000 operaciones
+12. groupadd --system #The command creates a system group, typically used for daemons and background system services.
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # groupadd --system servicios_web
 
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 X 130 # grep -E "desarrolladores|operaciones|servicios_web" /etc/group
+# desarrolladores:x:1000:
+# operaciones:x:2000:
+# servicios_web:x:995:
 #-----------------------------------------------------------------------------------------------------------------------------
