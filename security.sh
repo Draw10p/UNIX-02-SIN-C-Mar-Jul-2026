@@ -72,3 +72,14 @@ Creacion de nuevo directorio con el nombre de proyecto unix
 # operaciones:x:2000:
 # servicios_web:x:995:
 #-----------------------------------------------------------------------------------------------------------------------------
+grep -E "GID_MINI|GID_MAX|SYS_GID" /etc/login.defs  #It extracts the configured minimum and maximum Group ID ranges from the /etc/login.defs file.
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 X 2 # grep -E "GID_MINI|GID_MAX|SYS_GID" /etc/login.defs 
+# GID_MAX                 60000
+# #SYS_GID_MIN              101
+# #SYS_GID_MAX              999
+# SUB_GID_MAX             600100000
+#-----------------------------------------------------------------------------------------------------------------------------
+
+#-----------------------------------------------------------------------------------------------------------------------------
+
+#-----------------------------------------------------------------------------------------------------------------------------
