@@ -53,7 +53,7 @@
 # [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # id -G
 # 0
 #-----------------------------------------------------------------------------------------------------------------------------
-Creacion de nuevo directorio con el nombre de proyecto unix
+Create a new directory
 # [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # mkdir ~/proyecto_unix/                                                                                                                      
 # [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # ls -la  ~/proyecto_unix/
 # total 8
@@ -79,7 +79,10 @@ grep -E "GID_MINI|GID_MAX|SYS_GID" /etc/login.defs  #It extracts the configured 
 # #SYS_GID_MAX              999
 # SUB_GID_MAX             600100000
 #-----------------------------------------------------------------------------------------------------------------------------
-
+Creation of new groups
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # grep "diseño\|marketing\|cache_web" /etc/group
+# marketing:x:2100:
+# cache_web:x:102:
 #-----------------------------------------------------------------------------------------------------------------------------
 
 #-----------------------------------------------------------------------------------------------------------------------------
