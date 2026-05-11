@@ -101,3 +101,8 @@ adduser root marketing #This command adds the existing user root to the secondar
 usermod -aG grupo_temporal root #This command creates a new user group called grupo_temporal on the Linux system.
 #[Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # id root
 # uid=0(root) gid=0(root) grupos=0(root),1000(desarrolladores),1001(diseno),2100(marketing),2101(grupo_temporal)
+#-----------------------------------------------------------------------------------------------------------------------------
+usermod -G desarrolladores #The command replaces the specified user's secondary groups exclusively with the desarrolladores group.
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # id root
+# uid=0(root) gid=0(root) grupos=0(root),1000(desarrolladores)
+#-----------------------------------------------------------------------------------------------------------------------------
