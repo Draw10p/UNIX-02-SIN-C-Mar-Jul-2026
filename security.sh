@@ -109,3 +109,26 @@ usermod -G desarrolladores #The command replaces the specified user's secondary 
 usermod -aG diseno,marketing,grupo_temporal root # It appends the root user to the diseno, marketing, and grupo_temporal secondary groups.
 # [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # id root
 # uid=0(root) gid=0(root) grupos=0(root),1000(desarrolladores),1001(diseno),2100(marketing),2101(grupo_temporal)
+#-----------------------------------------------------------------------------------------------------------------------------
+mkdir -p ~/lab_chgrp/{proyectos,reportes,scripts}
+touch ~/lab_chgrp/proyectos/app.py
+touch ~/lab_chgrp/proyectos/config.json
+34  touch ~/lab_chgrp/reportes/infome.txt
+36  touch ~/lab_chgrp/scripts/deploy.sh
+#-----------------------------------------------------------------------------------------------------------------------------
+ls -la ~/lab_chgrp/proyectos/ # It outputs a detailed list of all files, including hidden ones, inside ~/lab_chgrp/proyectos/.
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # ls -la ~/lab_chgrp/proyectos/
+# total 8
+# drwxr-xr-x 2 root root 4096 may 11 14:59 .
+# drwxr-xr-x 5 root root 4096 may 11 14:58 ..
+# -rw-r--r-- 1 root root    0 may 11 14:59 app.py
+# -rw-r--r-- 1 root root    0 may 11 15:00 config.json
+# -rw-r--r-- 1 root root    0 may 11 14:59 informe.txt  
+#-----------------------------------------------------------------------------------------------------------------------------   
+ls -la ~/lab_chgrp/reportes/ # It outputs a detailed list of all files, including hidden ones, inside ~/lab_chgrp/reportes/.
+#[Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # ls -la ~/lab_chgrp/reportes/ 
+# total 8
+# drwxr-xr-x 2 root root 4096 may 11 15:00 .
+# drwxr-xr-x 5 root root 4096 may 11 14:58 ..
+# -rw-r--r-- 1 root root    0 may 11 15:00 infome.txt
+
