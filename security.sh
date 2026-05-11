@@ -158,3 +158,14 @@ chgrp diseno ~/lab_chgrp/proyectos/config.json ~/lab_chgrp/reportes/infome.txt #
 # drwxr-xr-x 5 root root   4096 may 11 14:58 ..
 # -rw-r--r-- 1 root diseno    0 may 11 15:00 infome.txt
 #-----------------------------------------------------------------------------------------------------------------------------
+chgrp -R desarrolladores ~/lab_chgrp/scripts/ # It recursively changes group ownership of the scripts directory and all contents to desarrolladores.
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # chgrp -R desarrolladores ~/lab_chgrp/scripts/                                                                                                                                                                
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # ls -laR ~/lab_chgrp/scripts/
+# /root/lab_chgrp/scripts/:
+# total 8
+# drwxr-xr-x 2 root desarrolladores 4096 may 11 15:01 .
+# drwxr-xr-x 5 root root            4096 may 11 14:58 ..
+# -rw-r--r-- 1 root desarrolladores    0 may 11 15:01 deploy.sh
+#-----------------------------------------------------------------------------------------------------------------------------
+chgrp -Rv diseno ~/lab_chgrp/reportes/ #It recursively changes group ownership of the reportes directory to diseno, showing verbose output.
+#-----------------------------------------------------------------------------------------------------------------------------
