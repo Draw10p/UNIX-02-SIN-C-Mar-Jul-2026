@@ -131,4 +131,14 @@ ls -la ~/lab_chgrp/reportes/ # It outputs a detailed list of all files, includin
 # drwxr-xr-x 2 root root 4096 may 11 15:00 .
 # drwxr-xr-x 5 root root 4096 may 11 14:58 ..
 # -rw-r--r-- 1 root root    0 may 11 15:00 infome.txt
-
+#-----------------------------------------------------------------------------------------------------------------------------
+chgrp desarrolladores ~/lab_chgrp/proyectos/app.py # This command changes the group ownership of the app.py file to the desarrolladores group.
+ls -la ~/lab_chgrp/proyectos/
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # ls -la ~/lab_chgrp/proyectos/
+# total 8
+# drwxr-xr-x 2 root root            4096 may 11 14:59 .
+# drwxr-xr-x 5 root root            4096 may 11 14:58 ..
+# -rw-r--r-- 1 root desarrolladores    0 may 11 14:59 app.py
+# -rw-r--r-- 1 root root               0 may 11 15:00 config.json
+# -rw-r--r-- 1 root root               0 may 11 14:59 informe.txt
+#-----------------------------------------------------------------------------------------------------------------------------
