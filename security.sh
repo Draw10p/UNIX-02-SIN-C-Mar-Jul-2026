@@ -89,3 +89,8 @@ usermod -aG desarrolladores root #The command adds the root user to the existing
 usermod -aG diseno root  # The command adds the root user to the existing group named diseno without removing it from its current groups.   
 # [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # usermod -aG diseno root       
 #-----------------------------------------------------------------------------------------------------------------------------
+grep "desarrolladores\|diseno" /etc/group #The command searches the /etc/group file for lines containing either "desarrolladores" or "diseno".
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # grep "desarrolladores\|diseno" /etc/group
+# desarrolladores:x:1000:root
+# diseno:x:1001:root
+#-----------------------------------------------------------------------------------------------------------------------------
