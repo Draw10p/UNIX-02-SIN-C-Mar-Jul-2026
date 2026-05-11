@@ -94,3 +94,6 @@ grep "desarrolladores\|diseno" /etc/group #The command searches the /etc/group f
 # desarrolladores:x:1000:root
 # diseno:x:1001:root
 #-----------------------------------------------------------------------------------------------------------------------------
+adduser root marketing #This command adds the existing user root to the secondary group named marketing.
+#[Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # id root
+# uid=0(root) gid=0(root) grupos=0(root),1000(desarrolladores),1001(diseno),2100(marketing)
