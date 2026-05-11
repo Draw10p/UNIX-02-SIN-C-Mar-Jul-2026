@@ -142,3 +142,19 @@ ls -la ~/lab_chgrp/proyectos/
 # -rw-r--r-- 1 root root               0 may 11 15:00 config.json
 # -rw-r--r-- 1 root root               0 may 11 14:59 informe.txt
 #-----------------------------------------------------------------------------------------------------------------------------
+chgrp diseno ~/lab_chgrp/proyectos/config.json ~/lab_chgrp/reportes/infome.txt # It changes the group ownership of both config.json and informe.txt to the diseno group.
+
+#[Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # ls -la ~/lab_chgrp/proyectos/
+# total 8
+# drwxr-xr-x 2 root root            4096 may 11 14:59 .
+# drwxr-xr-x 5 root root            4096 may 11 14:58 ..
+# -rw-r--r-- 1 root desarrolladores    0 may 11 14:59 app.py
+# -rw-r--r-- 1 root diseno             0 may 11 15:00 config.json
+# - rw-r--r-- 1 root root               0 may 11 14:59 informe.txt
+                                                                                                                                                                  
+#[Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # ls -la ~/lab_chgrp/reportes/ 
+# total 8
+# drwxr-xr-x 2 root root   4096 may 11 15:00 .
+# drwxr-xr-x 5 root root   4096 may 11 14:58 ..
+# -rw-r--r-- 1 root diseno    0 may 11 15:00 infome.txt
+#-----------------------------------------------------------------------------------------------------------------------------
