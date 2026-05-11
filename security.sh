@@ -106,3 +106,6 @@ usermod -G desarrolladores #The command replaces the specified user's secondary 
 # [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # id root
 # uid=0(root) gid=0(root) grupos=0(root),1000(desarrolladores)
 #-----------------------------------------------------------------------------------------------------------------------------
+usermod -aG diseno,marketing,grupo_temporal root # It appends the root user to the diseno, marketing, and grupo_temporal secondary groups.
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # id root
+# uid=0(root) gid=0(root) grupos=0(root),1000(desarrolladores),1001(diseno),2100(marketing),2101(grupo_temporal)
