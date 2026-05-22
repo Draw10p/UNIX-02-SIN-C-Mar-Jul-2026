@@ -1,3 +1,30 @@
+#  INSTALL DEPENDENCIES
+# We install essential build tools (gcc, make), kernel dependencies (flex, bison, libssl),
+# and emulation tools like QEMU and Syslinux.
+sudo apt update
+sudo apt install -y git vim make gcc libncurses-dev flex bison bc \
+cpio libelf-dev libssl-dev syslinux dosfstools qemu-system-x86
+
+#  COMPILE THE LINUX KERNEL
+# We clone the source code using --depth 1 to fetch only the latest commit.
+git clone --depth 1 https://github.com/torvalds/linux.git
+cd linux
+# Create a default configuration file for the x86_64 architecture.
+make defconfig
+# Start the build process using all available CPU cores (-j$(nproc)).
+make -j$(nproc)
+# Create a workspace directory and copy the generated kernel image (bzImage).
+sudo mkdir -p /boot-files
+sudo cp arch/x86/boot/bzImage /boot-files/
+cd ..
+
+#  COMPILE BUSYBOX
+# BusyBox provides the standard Unix utilities (ls, sh, cat, etc.) in a single binary.
+git clone --depth 1 https://git.busybox.net/busybox
+cd busybox
+# NOTE: BusyBox must be configured as a "Static Binary" in menuconfig to avoid 
+# dependencies on external shared libraries during boot.
+make -j$(nproc)
 # Install the compiled binaries into our initramfs directory structure.
 sudo mkdir -p /boot-files/initramfs
 sudo make CONFIG_PREFIX=/boot-files/initramfs install
