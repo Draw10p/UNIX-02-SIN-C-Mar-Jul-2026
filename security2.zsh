@@ -77,3 +77,65 @@ echo $$
 
 # [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # echo $$
 # 6228
+
+# We are rejoining the developers' group using the:
+
+newgrp desarrolladores
+
+# And we create a new file named:
+
+touch ~/dentro_de_newgrp2.txt
+
+# And we check to see if it worked as follows:
+
+ls -la ~/dentro_de_newgrp2.txt
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # ls -la ~/dentro_de_newgrp2.txt
+# -rw-r--r-- 1 root desarrolladores 0 may 29 15:43 /root/dentro_de_newgrp2.txt
+
+# Finally, we will create a new directory named "proyecto_dev" in the home directory and inside it, 
+# we will create another directory named "src" as follows:    
+
+mkdir -p ~/proyecto_dev/src
+
+# And we check to see if it worked as follows:
+
+ls -la ~/
+
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # ls -la ~/
+# total 72
+# drwx------ 1 root root             4096 may 29 15:43 .
+# drwxr-xr-x 1 root root             4096 may 29 14:39 ..
+# -rw-r--r-- 1 root root                0 may 29 15:06 antes_de_newgrp.txt
+# -rw-r--r-- 1 root root             5578 may 24 04:01 .bashrc
+# -rw-r--r-- 1 root root              607 may 24 04:01 .bashrc.original
+# drwxr-xr-x 3 root root             4096 may 29 14:39 .cache
+# drwx------ 3 root root             4096 may 29 14:39 .config
+# drwx------ 3 root root             4096 may 29 14:40 .copilot
+# -rw-r--r-- 1 root desarrolladores     0 may 29 15:43 dentro_de_newgrp2.txt
+# -rw-r--r-- 1 root root                0 may 29 15:38 dentro_de_newgrp.txt
+# -rw-r--r-- 1 root desarrolladores     0 may 29 15:29 despues_de_newgrp.txt
+# lrwxrwxrwx 1 root root               47 may 29 14:39 .docker -> /workspaces/.codespaces/.persistedshare/.docker
+# drwxr-xr-x 3 root root             4096 may 29 14:39 .dotnet
+# drwx------ 4 root root             4096 may 29 14:40 .local
+# -rw-r--r-- 1 root root              132 may 15 11:37 .profile
+# drwxr-xr-x 3 root desarrolladores  4096 may 29 15:43 proyecto_dev
+# drwx------ 2 root root             4096 may 29 14:38 .ssh
+# -rw-r--r-- 1 root root                0 may 
+# drwxr-xr-x 5 root root             4096 may 29 14:39 .vscode-remote
+# -rw------- 1 root root              155 may 29 15:43 .zsh_history
+# -rw-r--r-- 1 root root            10973 may 29 14:39 .zshrc
+
+# Finally, we will check the PID of the current shell as follows:
+echo "PID del shell actual: $$"
+
+#[Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # echo "PID del shell actual: $$"
+#PID del shell actual: 28057
+
+# We will switch to the new group again using the command.
+newgrp desarrolladores
+
+# And we check the PID again to see if it has changed or not as follows:
+echo "PID dentro de newgrp: $$"
+
+#[Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # echo "PID dentro de newgrp: $$"
+#PID dentro de newgrp: 32084
