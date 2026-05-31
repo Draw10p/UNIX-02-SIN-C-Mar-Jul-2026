@@ -140,11 +140,11 @@ echo "PID dentro de newgrp: $$"
 #[Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # echo "PID dentro de newgrp: $$"
 #PID dentro de newgrp: 32084
 
-# Next command help us create a password-protected group called "grupo_restringido" and we will set a password for it.
-sudo groupadd grupo_restringido
-
 # We will need to install the sudo package if it is not already installed on our system, as it is required to use the gpasswd command to set a password for the group. You can install it using the following command:
 apt update && apt install -y sudo
+
+# Next command help us create a password-protected group called "grupo_restringido" and we will set a password for it.
+sudo groupadd grupo_restringido
 
 # Now we will set a password for the "grupo_restringido" group using the following command:
 sudo gpasswd grupo_restringido
