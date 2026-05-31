@@ -139,3 +139,27 @@ echo "PID dentro de newgrp: $$"
 
 #[Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # echo "PID dentro de newgrp: $$"
 #PID dentro de newgrp: 32084
+
+# Next command help us create a password-protected group called "grupo_restringido" and we will set a password for it.
+sudo groupadd grupo_restringido
+
+# Now we will set a password for the "grupo_restringido" group using the following command:
+sudo gpasswd grupo_restringido
+
+# After setting the password, we can switch to the "grupo_restringido" group using the newgrp command and entering the password when prompted:
+newgrp grupo_restringido
+
+# If the password is correct, we will switch to the "grupo_restringido" group and we can check our current group again using the id command:
+id -gn
+
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # newgrp grupo_restringido
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 √ # id -gn
+# grupo_restringido
+
+# But if you want to know whether this group has a password, run the following command:
+cat /etc/gshadow | grep grupo_restringido
+
+# [Darwin-Román✝] UNIX-02-SIN-C-Mar-Jul-2026 X 1 # cat /etc/gshadow | grep grupo_restringido
+# grupo_restringido:$y$j9T$fNZpXkrj7Fdv6/Vh2Dt8T1$/vLTk89atZ5BykME9XdlthWEnBzxoUQCdk9qm5mNK5C::
+# The output shows that the "grupo_restringido" group has a password set, as indicated by the presence 
+# of the hashed password in the second field. If there was no password set, this field would be empty.
