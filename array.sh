@@ -7,3 +7,6 @@ echo "${IP_ADDRESSES[*]}"
 set -x
 # Prints only the first element in the array
 echo "${IP_ADDRESSES[0]}"
+
+unset IP_ADDRESSES[1]
+echo "${IP_ADDRESSES[*]}"
