@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the filename to check
-FILE="output.txt"
+FILE="output1.txt"
 # Create the file if it doesn't exist
 touch "${FILE}"
 # Loop until the file has content (size > 0)
