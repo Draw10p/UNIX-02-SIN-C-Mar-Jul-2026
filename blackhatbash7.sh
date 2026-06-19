@@ -28,3 +28,13 @@ touch test.csv
 echo -e "hola1,chao1\nhola2,chao2\nhola3,chao3" >> test.csv
 
 awk -F, '{print $1}' test.csv
+
+head log.txt
+
+awk 'NR < 10' log.txt
+
+grep "42.236.10.117" log.txt # This filters the log.txt file and displays only the complete lines that contain the IP address 42.236.10.117.
+
+awk '{print $7}' log.txt # Processes text line by line and extracts only the seventh column
+
+grep "42.236.10.117" log.txt | awk '{print $7}' # This command first filters the log.txt file to find lines containing the IP address and shows only the resources or pages (column 7) visited by that specific IP address
