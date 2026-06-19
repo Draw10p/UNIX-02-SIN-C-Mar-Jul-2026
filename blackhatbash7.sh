@@ -14,3 +14,17 @@ ps | grep TTY
 ps | grep -i tty
 
 grep -v "35.237.4.214" log.txt
+
+grep -o "35.237.4.214" log.txt
+
+awk '{print $1}' log.txt
+
+awk '{print $1,$2,$3}' log.txt
+
+awk '{print $1,$NF}' log.txt
+
+touch test.csv
+
+echo -e "hola1,chao1\nhola2,chao2\nhola3,chao3" >> test.csv
+
+awk -F, '{print $1}' test.csv
